@@ -1,17 +1,7 @@
-.loginlogo {
-    text-align: center;
-  }
-  
-  input[type="email"] {
-    width: 50%;
-  }
-  
-  input[type="password"] {
-    width: 50%;
-  }
   
   input[type="date"] {
-    width: 50%;
+    width: 60%;
+    
 }
 
 .downinfo{
@@ -19,5 +9,49 @@
 }
   
 .logonav{
-  width: 7%;
+  width: 5%;
 }  
+
+.col-sm-10{
+  text-align: center;
+  
+}
+
+body.login{
+  background-color: #2a1a00;
+  
+}
+
+label {
+  color: #f8b323;
+}
+
+body.index{
+  background-color: #2a1a00;
+  
+}
+
+.conteiner-fluid {
+  background-color: #f8b323; 
+  
+}
+
+.formlogin{
+  background-color: #f8b323;
+  border-radius: 2em;
+  text-align: center;
+  margin-top: 10%;
+}
+
+.form-label, .form-check-label{
+  color: black;
+  font-weight: bolder;
+}
+
+.botoes-login{
+  text-align: center;
+}
+
+
+
+
