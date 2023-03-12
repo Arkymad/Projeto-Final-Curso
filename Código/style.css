@@ -23,7 +23,7 @@ body.login{
 }
 
 label {
-  color: #f8b323;
+  color: black;
 }
 
 body.index{
@@ -48,10 +48,9 @@ body.index{
   font-weight: bolder;
 }
 
-.botoes-login{
-  text-align: center;
+label.floatingSelect{
+  color: black;
 }
-
 
 
 
