@@ -1,0 +1,3 @@
+Ionic, Nestjs
+Banco de dados: PostgreSQL
+IDE: Visual Studio Code
