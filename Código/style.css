@@ -52,5 +52,15 @@ label.floatingSelect{
   color: black;
 }
 
+.checks-wrapper {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  align-items: center;
+}
 
+body.religiões{
+  background-color: #f8b323;
+  
+}
 
