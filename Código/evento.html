@@ -20,12 +20,12 @@
           <img src="..\Imagens\logo.jpg" class="img-fluid" alt="...">    
           <div class="mb-3">
             <label for="" class="form-label">Endereço</label>
-            <input type="adress" class="form-control" id="" aria-describedby="" required>
+            <input type="adress" class="form-control" id="adress" aria-describedby="" required>
             <div id="" class="form-text"></div>
           </div>
           <div class="mb-3">
-            <label for="event-description" class="form-label">Descrição do Evento (incluindo a subdivisão da religião) </label>
-            <textarea id="event-description" name="event-description" rows="5" cols="30" style="width: 100%;"></textarea>
+            <label for="event-description" class="form-label" aria-required="">Descrição do Evento (incluindo a subdivisão da religião) </label>
+            <textarea id="event-description" name="event-description" rows="5" cols="30" style="width: 100%;" required></textarea>
           </div>
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Confirme sua senha</label>
@@ -34,7 +34,18 @@
           <h5>Escolha a religião do evento</h5>
           <iframe src="religiões.html" width="100%" height="100%"> </iframe>
           <div class="col-12">
-            <button class="btn btn-primary" type="submit">Criar evento</button>
+            <button onclick="alertevento()" class="btn btn-primary" type="submit">Criar evento</button>
+            <script>
+              function alertevento() {
+                var adress = document.getElementById("adress").value;
+                var desc = document.getElementById("event-description").value;
+                var password = document.getElementById("exampleInputPassword1").value;
+                    if (adress == "" || desc =="" || password == "") {
+                     alert("Por favor, preencha todos os campos do formulário!");
+                       } else {alert("Evento criado com sucesso!");
+                                            }
+              }
+            </script>
           </div>
         </form>
 
