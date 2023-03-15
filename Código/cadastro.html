@@ -10,18 +10,15 @@
   <body class="login">
 
     <div class="container">   
-      <form class="formlogin">
-          <img src="..\Imagens\logo.jpg" class="img-fluid" alt="...">    
+      <form action="login.html" method="post"class="formlogin">
+          <img src="..\Imagens\logo.jpg" class="img-fluid" alt="..."> 
           <div class="mb-3">
+            <label for="nome" class="form-label">Como quer ser chamado?</label>
+            <input type="text" id="nome" name="nome" class="form-control" required> 
             <label for="exampleInputEmail1" class="form-label">Endereço de e-mail</label>
             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
-            <div id="emailHelp" class="form-text"></div>
-          </div>
-          <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Senha</label>
             <input type="password" class="form-control" id="exampleInputPassword1" required>
-          </div>
-          <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Confirme sua senha</label>
             <input type="password" class="form-control" id="exampleInputPassword1" required>
           </div>
@@ -29,11 +26,20 @@
           <iframe src="religiões.html" width="100%" height="100%"> </iframe>
 
           <div class="col-12">
-            <button class="btn btn-primary" type="submit">Cadastrar</button>
+            <button onclick="alertcadastro()" class="btn btn-primary" type="submit">Cadastrar</button>
+            <script>
+              function alertcadastro() {
+                var nome = document.getElementById("nome").value;
+                var email = document.getElementById("exampleInputEmail1").value;
+                var password = document.getElementById("exampleInputPassword1").value;
+                if (nome == "" || email == "" || password == "") {
+                 alert("Por favor, preencha todos os campos do formulário!");
+                   } else {alert("Olá, " + nome + ". Seu cadastro foi concluído com sucesso!");
+                                        }
+            }
+            </script>
           </div>
-
-<br>
-
+          <br>
         </form>
         
       </div>

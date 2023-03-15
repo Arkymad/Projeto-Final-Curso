@@ -11,23 +11,23 @@
   <body class="login">
 
     <div class="container">   
-      <form class="formlogin">
+      <form action="index.html" method="post" class="formlogin">
           <img src="..\Imagens\logo.jpg" class="img-fluid" alt="...">    
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Endereço de e-mail</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
             <div id="emailHelp" class="form-text"></div>
           </div>
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Senha</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
+            <input type="password" class="form-control" id="exampleInputPassword1" required>
           </div>
-          <button type="submit" class="btn btn-primary">Entrar</button>
+        <button type="submit" class="btn btn-primary">Entrar</button>
           <br>
           <br>
 
           <a href="forgotpassword.html">Esqueci minha senha</a>
-<br>
+          <br>
           <a href="cadastro.html">Não tenho cadastro</a>
 
         </form>
