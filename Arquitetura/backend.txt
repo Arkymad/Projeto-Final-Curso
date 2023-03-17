@@ -1,0 +1,14 @@
+API Nestjs, AXIOS, ASAAS, Prisma, tokenjwt, AUTHGUARD.
+
+Endpoints: 
+Token;
+Usuario: listar, cadastrar, remover, alterar.
+Assinatura: listar, cadastrar, remover, alterar.
+Cliente: listar, cadastrar, remover, alterar.
+Cobrança: listar, cadastrar, remover, alterar.
+Evento: listar, cadastrar, remover, alterar.
+Igreja: listar, cadastrar, remover, alterar.
+Pagamento: listar, cadastrar, remover, alterar.
+Religião: listar, cadastrar, remover, alterar.
+
+A API Key do ASAAS não será compartilhada na documentação.
