@@ -21,8 +21,7 @@ CREATE TABLE usuario (
     sobrenome VARCHAR (50) NOT NULL,
     email VARCHAR (255) NOT NULL,
     senha VARCHAR (20) NOT NULL,
-    status, /*Deixei em branco pro Thalis/Allaf preencherem com o que vão usar nesse campo*/
-    descricao VARCHAR (500), 
+    status VARCHAR (20) NOT NULL, 
     PRIMARY KEY (id_usuario),
     FOREIGN KEY (religiao_id) REFERENCES religiao(id_religiao),
     FOREIGN KEY (igreja_id) REFERENCES igreja(id_igreja)
@@ -30,9 +29,9 @@ CREATE TABLE usuario (
 CREATE TABLE evento (
     id_evento INT NOT NULL, 
     usuario_id INT NOT NULL,
-    data, /*Deixei em branco pro Thalis/Allaf preencherem com o que vão usar nesse campo*/
+    data, 
     endereco VARCHAR (200) NOT NULL,
-    tipo, /*Deixei em branco pro Thalis/Allaf preencherem com o que vão usar nesse campo*/
+    tipo boolean, 
     descricao VARCHAR (500), 
     PRIMARY KEY (id_evento)
     FOREIGN KEY (usuario_id) REFERENCES usuario(id_usuario)
