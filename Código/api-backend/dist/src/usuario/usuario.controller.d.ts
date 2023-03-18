@@ -9,19 +9,17 @@ export declare class UsuarioController {
         religiao: number;
         igreja: number;
         nome: string;
-        sobrenome: string;
         email: string;
         senha: string;
-        status: string;
+        status: boolean;
     }): Promise<import(".prisma/client").Usuario>;
     update(id: string, data: {
         religiao: number;
         igreja: number;
         nome: string;
-        sobrenome: string;
         email: string;
         senha: string;
-        status: string;
+        status: boolean;
     }): Promise<import(".prisma/client").Usuario>;
     delete(id: string): Promise<import(".prisma/client").Usuario>;
     login(req: any): Promise<{

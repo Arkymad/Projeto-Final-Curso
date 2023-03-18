@@ -24,20 +24,19 @@ export class RegisterPage implements OnInit {
 
   usuario: Usuario = {
     id: 0,
-    usuario: "",
     nome: "",
-    telefone: "",
     email: "",
-    senha: ""
+    senha: "",
+    religiao: 0,
+    igreja: 0,
+    status: false
   }
 
   formulario!: FormGroup;
 
   validaForm(){
     this.formulario = this.formBuilder.group({
-      usuario: ['', [Validators.required]],
       nome: ['', [Validators.required]],
-      telefone: ['', [Validators.required]],
       email: ['', [Validators.required]],
       senha: ['', [Validators.required]]
     });
@@ -45,12 +44,13 @@ export class RegisterPage implements OnInit {
 
   cadastro(): void{
     const data = {
-    usuario: this.usuario.usuario,
     nome: this.usuario.nome,
-    telefone: this.usuario.telefone,
     email: this.usuario.email,
-    senha: this.usuario.senha
-    };
+    senha: this.usuario.senha,
+    religiao: this.usuario.religiao,
+    igreja: this.usuario.igreja,
+    status: this.usuario.status
+  };
     this.usersService.create(data)
     .subscribe({
     next: (res) => {

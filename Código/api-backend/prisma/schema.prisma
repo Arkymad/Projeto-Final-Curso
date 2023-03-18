@@ -1,6 +1,6 @@
 datasource db {
   provider = "postgresql"
-  url = "postgresql://postgres:j4eGeQDRLN26f80x9P9p@containers-us-west-41.railway.app:5998/railway"
+  url = "postgresql://postgres:2kHSQ3p6GZIWZlefmC3e@containers-us-west-60.railway.app:5678/railway"
 }
 
 generator client {
@@ -10,13 +10,12 @@ generator client {
 
 model Usuario {
   id        Int      @id @default(autoincrement())
-  religiao_id Int
-  igreja_id Int
+  religiao_id Int   @default(0)
+  igreja_id Int     @default(0)
   nome   String
-  sobrenome String
   email     String   @unique
   senha  String
-  status String
+  status Boolean     @default(false)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }

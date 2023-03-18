@@ -1,13 +1,12 @@
 -- CreateTable
 CREATE TABLE "Usuario" (
     "id" SERIAL NOT NULL,
-    "religiao_id" INTEGER NOT NULL,
-    "igreja_id" INTEGER NOT NULL,
+    "religiao_id" INTEGER NOT NULL DEFAULT 0,
+    "igreja_id" INTEGER NOT NULL DEFAULT 0,
     "nome" TEXT NOT NULL,
-    "sobrenome" TEXT NOT NULL,
     "email" TEXT NOT NULL,
     "senha" TEXT NOT NULL,
-    "status" TEXT NOT NULL,
+    "status" BOOLEAN NOT NULL DEFAULT false,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updatedAt" TIMESTAMP(3) NOT NULL,
 

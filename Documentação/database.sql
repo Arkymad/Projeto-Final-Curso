@@ -18,7 +18,6 @@ CREATE TABLE usuario (
     religiao_id INT NOT NULL,
     igreja_id INT NOT NULL,
     nome VARCHAR (50) NOT NULL,
-    sobrenome VARCHAR (50) NOT NULL,
     email VARCHAR (255) NOT NULL,
     senha VARCHAR (20) NOT NULL,
     status VARCHAR (20) NOT NULL, 

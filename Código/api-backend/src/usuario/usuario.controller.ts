@@ -27,17 +27,15 @@ export class UsuarioController {
       religiao: number, 
       igreja: number, 
       nome: string, 
-      sobrenome: string, 
       email: string, 
       senha: string, 
-      status: string,
+      status: boolean,
     }) {
     const user = await this.prisma.getClient().usuario.create({
       data: {
         religiao_id: data.religiao,
         igreja_id: data.igreja,
         nome: data.nome,
-        sobrenome: data.sobrenome,
         status: data.status,
         email: data.email,
         senha: bcrypt.hashSync(data.senha, 8),
@@ -53,10 +51,9 @@ export class UsuarioController {
     religiao: number, 
     igreja: number, 
     nome: string, 
-    sobrenome: string, 
     email: string, 
     senha: string, 
-    status: string,
+    status: boolean,
     }) {
     const user = await this.prisma.getClient().usuario.update({
       where: {
@@ -66,7 +63,6 @@ export class UsuarioController {
         religiao_id: data.religiao,
         igreja_id: data.igreja,
         nome: data.nome,
-        sobrenome: data.sobrenome,
         status: data.status,
         email: data.email,
         senha: bcrypt.hashSync(data.senha, 8),

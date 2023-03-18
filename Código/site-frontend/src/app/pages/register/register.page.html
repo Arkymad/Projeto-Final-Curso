@@ -11,29 +11,11 @@
   <form [formGroup]="formulario" (submit)="cadastro()">
     <div class="input-div">
       <ion-item>
-        <h3>Usuário</h3>
-        <ion-label class="nome-label">Nome de Usuário</ion-label> <br/><br/>
-      </ion-item>
-      <ion-item>
-        <ion-input class="inputs" type="text" class="form-control" id="usuario" name="usuario" [(ngModel)]="usuario.usuario" formControlName="usuario" placeholder="Insira o Usuário"></ion-input>
-      </ion-item>
-    </div>
-    <div class="input-div">
-      <ion-item>
         <h3>Nome</h3>
         <ion-label class="nome-label">Nome Completo</ion-label> <br/><br/>
       </ion-item>
       <ion-item>
         <ion-input class="inputs" type="text" class="form-control" id="nome" name="nome" [(ngModel)]="usuario.nome" formControlName="nome" placeholder="Insira seu Nome"></ion-input>
-      </ion-item>
-    </div>
-    <div class="input-div">
-      <ion-item>
-        <h3>Telefone</h3>
-        <ion-label class="nome-label">Telefone</ion-label> <br/><br/>
-      </ion-item>
-      <ion-item>
-        <ion-input class="inputs" type="text" class="form-control" id="telefone" name="telefone" [(ngModel)]="usuario.telefone" formControlName="telefone"placeholder="Digite o telefone" ></ion-input>
       </ion-item>
     </div>
     <div class="input-div">

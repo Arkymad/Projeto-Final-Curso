@@ -18,7 +18,7 @@ export class LoginPage implements OnInit {
   ) { }
 
   login: Login = {
-    usuario: "",
+    email: "",
     senha: ""
   }
 
@@ -30,14 +30,14 @@ export class LoginPage implements OnInit {
 
   validaForm(){
     this.formulariologin = this.formBuilder.group({
-      usuario: ['', [Validators.required]],
+      email: ['', [Validators.required]],
       senha: ['', [Validators.required]]
     });
   }
   
     onSubmit() {
     const body = {
-      username: this.login.usuario,
+      username: this.login.email,
       password: this.login.senha
     };
     this.usersService.login(body)

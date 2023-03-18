@@ -18,7 +18,7 @@ export class ForgotPasswordPage implements OnInit {
   ) { }
 
   login: Login = {
-    usuario: "",
+    email: "",
     senha: ""
   }
 
@@ -30,27 +30,25 @@ export class ForgotPasswordPage implements OnInit {
 
   validaForm(){
     this.formulariologin = this.formBuilder.group({
-      usuario: ['', [Validators.required]],
-      senha: ['', [Validators.required]]
+      usuario: ['', [Validators.required]]
     });
   }
   
     onSubmit() {
-    const body = {
-      username: this.login.usuario,
-      password: this.login.senha
-    };
-    this.usersService.login(body)
-    .subscribe({
-    next: (res) => {
-    console.log(res);
-    console.log('Usuário autenticado.')
-    this.navCtrl.navigateForward('/inicio');
-    },
-    error: (e) => {
-      console.error(e)
-      console.log("Dados Enviados", body);
-    }
-    });
+    // const body = {
+    //   username: this.login.email,
+    // };
+    // this.usersService.login(body)
+    // .subscribe({
+    // next: (res) => {
+    // console.log(res);
+    // console.log('Usuário autenticado.')
+    // this.navCtrl.navigateForward('/inicio');
+    // },
+    // error: (e) => {
+    //   console.error(e)
+    //   console.log("Dados Enviados", body);
+    // }
+    // });
   }
 }
