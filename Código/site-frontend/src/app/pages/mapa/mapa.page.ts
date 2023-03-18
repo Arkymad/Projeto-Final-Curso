@@ -15,8 +15,10 @@ export class MapaPage implements OnInit, OnDestroy {
   ngOnInit() { }
   ionViewDidEnter() { this.leafletMap(); }
 
+  ngOnDestroy() {
+    this.map.remove();
+  }
   
-
   leafletMap() {
     const iconRetinaUrl = 'assets/marker-icon-2x.png';
     const iconUrl = 'assets/marker-icon.png';
@@ -33,16 +35,14 @@ export class MapaPage implements OnInit, OnDestroy {
   });
   Marker.prototype.options.icon = iconDefault;
 
-    this.map = Leaflet.map('mapId').setView([-22.90006894580267, -43.18136190258232], 17);
+    this.map = Leaflet.map('mapId').setView([-22.900949126484733, -43.31408073261323], 17);
     Leaflet.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: 'iSenac © 4F Group',
+      attribution: 'Comunicação Divina ©',
     }).addTo(this.map);
-    Leaflet.marker([-22.90006894580267, -43.18136190258232]).addTo(this.map).bindPopup('Senac Marechal Floriano').openPopup();
+    Leaflet.marker([-22.900949126484733, -43.31408073261323]).addTo(this.map).bindPopup('Casa Thalis').openPopup();
 
   }
 
-  ngOnDestroy() {
-    this.map.remove();
-  }
+  
 
 }
