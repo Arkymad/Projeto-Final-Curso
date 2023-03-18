@@ -2,34 +2,34 @@
   <div class="ion-page" id="main-content">
     <ion-header>
       <ion-toolbar>
-        <ion-title>Comunicação - <strong>Divina</strong>  </ion-title>
+        <ion-title><strong>Umbanda</strong></ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content class="ion-padding">
-      <ion-list-header>
-        <ion-label>Inicio</ion-label>
-      </ion-list-header>
+
         <ion-item>
           <ion-icon slot="start"  name="checkbox"></ion-icon>
           <ion-label><strong>O que é?</strong></ion-label>
         </ion-item>
-        <ion-card-content>Texto sobre o que é religião.</ion-card-content>
+
+        <ion-card-content>Texto sobre a religião.</ion-card-content>
+
         <ion-item>
-          <ion-icon slot="start"  name="bookmarks"></ion-icon>
-          <ion-label>Sobre o Aplicativo</ion-label>
+          <ion-icon slot="start"  class="bi bi-bank"></ion-icon>
+          <ion-label>Quais os principais templos:</ion-label>
         </ion-item>
-        <ion-card-content>Texto sobre o APP.</ion-card-content>
+
+        <ion-card-content>Texto sobre os templos.</ion-card-content>
+        
         <ion-item>
-          <ion-icon slot="start"  name="people"></ion-icon>
-          <ion-label>Sobre a Equipe</ion-label>
+          <ion-icon slot="start"  name="bulb"></ion-icon>
+          <ion-label>Curiosidades:</ion-label>
         </ion-item>
-        <ion-card-content>O <strong>Nosso Grupo</strong> é composto por cinco membros:
-          <br> <strong> Allaf Ramon </strong>  - Função 
-          <br> <strong> Gabriela Rosa </strong> - Função 
-          <br> <strong> Pedro H. Motta </strong> - Função 
-          <br> <strong> Thalis Mateus </strong> - Função 
-          <br> <strong> Thalita Guimarães </strong> - Função 
-        </ion-card-content>
+
+        <ion-card-content>Texto sobre as Curiosidades.
+
+          </ion-card-content>
+          
     </ion-content>
   </div>
 </ion-content>
@@ -38,22 +38,27 @@
   <ion-toolbar color="primary">
     <ion-tabs>
       <ion-tab-bar slot="bottom">
-        <ion-tab-button [routerLink]="['/home']">
-          <ion-icon name="power" aria-hidden="true"></ion-icon>
-          <ion-label>Sair</ion-label>
+
+        <ion-tab-button [routerLink]="['/inicio']">
+          <ion-icon name="home" aria-hidden="true"></ion-icon>
+          <ion-label>Inicio</ion-label>
         </ion-tab-button>
+
         <ion-tab-button [routerLink]="['/religioes']">
           <ion-icon name="star" aria-hidden="true"></ion-icon>
           <ion-label>Religiões</ion-label>
         </ion-tab-button>
+
         <ion-tab-button [routerLink]="['/mapa']">
           <ion-icon name="map" aria-hidden="true"></ion-icon>
           <ion-label>Mapa</ion-label>
         </ion-tab-button>
+
         <ion-tab-button [routerLink]="['/conta']">
           <ion-icon name="person" aria-hidden="true"></ion-icon>
           <ion-label>Conta</ion-label>
         </ion-tab-button>
+
       </ion-tab-bar>
     </ion-tabs>
   </ion-toolbar>

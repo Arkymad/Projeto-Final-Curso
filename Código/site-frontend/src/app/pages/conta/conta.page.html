@@ -1,18 +1,29 @@
-
-  
-  <ion-content>
-    <div class="ion-page" id="main-content">
-      <ion-header>
-        <ion-toolbar>
-          <ion-title>Mapa do Senac</ion-title>
-        </ion-toolbar>
-      </ion-header>
-      <ion-content class="ion-padding">
-        <div id="mapId" style="width: 100%; height: 100%">
-        </div>
+<ion-content>
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Conta</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <ion-content>
+        <ion-list>
+          <ion-item *ngFor="let user of (users | async)">
+            <ion-label>
+              <h2>ID: {{ user.id }}</h2>
+              <h2>Usuário: {{ user.usuario }}</h2>
+              <h2>Nome: {{ user.nome }}</h2>
+              <h2>Telefone: {{ user.telefone }}</h2>
+              <h2>E-mail: {{ user.email }}</h2>
+              <h2>Senha: {{ user.senha }}</h2>
+            </ion-label>
+            <ion-icon slot="start" icon="person-circle" color="primary"></ion-icon>
+          </ion-item>
+        </ion-list>
       </ion-content>
-    </div>
-  </ion-content>
+    </ion-content>
+  </div>
+</ion-content>
 
 <ion-footer>
   <ion-toolbar color="primary">

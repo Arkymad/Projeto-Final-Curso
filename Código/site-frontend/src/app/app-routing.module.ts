@@ -31,6 +31,14 @@ const routes: Routes = [
     path: 'mapa',
     loadChildren: () => import('./pages/mapa/mapa.module').then( m => m.MapaPageModule)
   },
+  {
+    path: 'conta',
+    loadChildren: () => import('./pages/conta/conta.module').then( m => m.ContaPageModule)
+  },
+  {
+    path: 'religioes',
+    loadChildren: () => import('./pages/religioes/religioes.module').then( m => m.ReligioesPageModule)
+  },
 ];
 
 @NgModule({
