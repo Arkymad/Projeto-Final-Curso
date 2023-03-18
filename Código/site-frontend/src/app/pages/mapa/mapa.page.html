@@ -1,0 +1,40 @@
+
+  
+  <ion-content>
+    <div class="ion-page" id="main-content">
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Mapa do Senac</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+        <div id="mapId" style="width: 100%; height: 100%">
+        </div>
+      </ion-content>
+    </div>
+  </ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button [routerLink]="['/inicio']">
+          <ion-icon name="home" aria-hidden="true"></ion-icon>
+          <ion-label>Inicio</ion-label>
+        </ion-tab-button>
+        <ion-tab-button [routerLink]="['/material']">
+          <ion-icon name="leaf" aria-hidden="true"></ion-icon>
+          <ion-label>Material Reciclável</ion-label>
+        </ion-tab-button>
+        <ion-tab-button [routerLink]="['/mapa']">
+          <ion-icon name="map" aria-hidden="true"></ion-icon>
+          <ion-label>Mapa</ion-label>
+        </ion-tab-button>
+        <ion-tab-button [routerLink]="['/conta']">
+          <ion-icon name="person" aria-hidden="true"></ion-icon>
+          <ion-label>Conta</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>
