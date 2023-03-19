@@ -8,15 +8,11 @@ import { UsuarioService } from 'src/app/services/usuario.service';
   styleUrls: ['./conta.page.scss'],
 })
 export class ContaPage implements OnInit {
-
   users!: Observable<any>;
 
-  constructor(
-    private usersService: UsuarioService,
-  ) { }
+  constructor(private usersService: UsuarioService) {}
 
   ngOnInit() {
-    this.users= this.usersService.findAll();
+    this.users = this.usersService.findAll();
   }
-
 }

@@ -1,39 +1,63 @@
 <ion-content>
-  <br/>
+  <br />
   <ion-item href="/home">
     <div class="logo">
-      <ion-img src="../../../assets/icon/logo.jpg"></ion-img>    
+      <ion-img src="../../../assets/icon/logo.jpg"></ion-img>
     </div>
   </ion-item>
-  <br/>
-  <br/>
-  <br/>
+  <br />
+  <br />
+  <br />
   <form [formGroup]="formulario" (submit)="cadastro()">
     <div class="input-div">
       <ion-item>
-        <h3>Nome</h3>
-        <ion-label class="nome-label">Nome Completo</ion-label> <br/><br/>
+        <ion-label class="nome-label">Nome Completo</ion-label> <br /><br />
       </ion-item>
       <ion-item>
-        <ion-input class="inputs" type="text" class="form-control" id="nome" name="nome" [(ngModel)]="usuario.nome" formControlName="nome" placeholder="Insira seu Nome"></ion-input>
+        <ion-input
+          class="inputs"
+          type="text"
+          class="form-control"
+          id="nome"
+          name="nome"
+          [(ngModel)]="usuario.nome"
+          formControlName="nome"
+          placeholder="Insira seu Nome"
+        ></ion-input>
       </ion-item>
     </div>
     <div class="input-div">
       <ion-item>
-        <h3>Email</h3>
-        <ion-label class="nome-label">Email</ion-label> <br/><br/>
+        <ion-label class="nome-label">Email</ion-label> <br /><br />
       </ion-item>
       <ion-item>
-        <ion-input class="inputs" type="text" class="form-control" id="email" name="email" [(ngModel)]="usuario.email" formControlName="email"placeholder="Insira o email" ></ion-input>
+        <ion-input
+          class="inputs"
+          type="text"
+          class="form-control"
+          id="email"
+          name="email"
+          [(ngModel)]="usuario.email"
+          formControlName="email"
+          placeholder="Insira o email"
+        ></ion-input>
       </ion-item>
     </div>
     <div class="input-div">
       <ion-item>
-        <h3>Senha</h3>
-        <ion-label class="nome-label">Senha</ion-label> <br/><br/>
+        <ion-label class="nome-label">Senha</ion-label> <br /><br />
       </ion-item>
-        <ion-item>
-        <ion-input class="inputs"  type="password" class="form-control" id="senha" name="senha" [(ngModel)]="usuario.senha" formControlName="senha" placeholder="Insira a senha" ></ion-input>
+      <ion-item>
+        <ion-input
+          class="inputs"
+          type="password"
+          class="form-control"
+          id="senha"
+          name="senha"
+          [(ngModel)]="usuario.senha"
+          formControlName="senha"
+          placeholder="Insira a senha"
+        ></ion-input>
       </ion-item>
     </div>
     <div class="button-2">
@@ -41,13 +65,12 @@
         <ion-button type="submit" color="primary">Cadastrar</ion-button>
       </ion-buttons>
     </div>
-    <br/>
-    <br/>
-    <br/>
+    <br />
+    <br />
+    <br />
     <ion-item href="/login">
       <div class="criar-conta">
-        <h5><strong>Já tem sua conta?</strong></h5>&nbsp;&nbsp;
-        <h5>Faça login!</h5>
+        <h5><strong>Já possui uma conta?</strong></h5>
       </div>
     </ion-item>
   </form>
