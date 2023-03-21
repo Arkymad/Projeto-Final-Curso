@@ -6,30 +6,55 @@
       </ion-toolbar>
     </ion-header>
     <ion-content class="ion-padding">
+      <ion-item>
+        <ion-icon slot="start" name="checkbox"></ion-icon>
+        <ion-label><strong>O que é?</strong></ion-label>
+      </ion-item>
 
-        <ion-item>
-          <ion-icon slot="start"  name="checkbox"></ion-icon>
-          <ion-label><strong>O que é?</strong></ion-label>
-        </ion-item>
+      <ion-card-content>
+        O catolicismo é uma das maiores religiões do mundo, com mais de 1 bilhão
+        de adeptos. É baseada na crença em um Deus trino (Pai, Filho e Espírito
+        Santo), na vida e ensinamentos de Jesus Cristo e na autoridade do Papa
+        como líder da Igreja Católica. Os católicos seguem uma série de rituais,
+        sacramentos e tradições.
+      </ion-card-content>
 
-        <ion-card-content>Texto sobre a religião.</ion-card-content>
+      <ion-item>
+        <ion-icon slot="start" class="bi bi-bank"></ion-icon>
+        <ion-label>Quais os principais templos:</ion-label>
+      </ion-item>
 
-        <ion-item>
-          <ion-icon slot="start"  class="bi bi-bank"></ion-icon>
-          <ion-label>Quais os principais templos:</ion-label>
-        </ion-item>
+      <ion-card-content
+        >- Catedral de São Sebastião (Rio de Janeiro)</ion-card-content
+      >
+      <ion-card-content>- Igreja da Penha (Rio de Janeiro)</ion-card-content>
+      <ion-card-content
+        >- Basílica de Nossa Senhora da Conceição (Niterói)</ion-card-content
+      >
 
-        <ion-card-content>Texto sobre os templos.</ion-card-content>
-        
-        <ion-item>
-          <ion-icon slot="start"  name="bulb"></ion-icon>
-          <ion-label>Curiosidades:</ion-label>
-        </ion-item>
+      <ion-item>
+        <ion-icon slot="start" name="bulb"></ion-icon>
+        <ion-label>Curiosidades:</ion-label>
+      </ion-item>
 
-        <ion-card-content>Texto sobre as Curiosidades.
-
-          </ion-card-content>
-          
+      <ion-card-content>
+        A Igreja Católica é a maior denominação cristã do mundo, com mais de 1,3
+        bilhão de membros.
+      </ion-card-content>
+      <ion-card-content
+        >A Igreja Católica acredita na Santíssima Trindade, que é a crença de
+        que Deus existe como três pessoas: o Pai, o Filho e o Espírito
+        Santo.</ion-card-content
+      >
+      <ion-card-content
+        >O Vaticano, que fica na cidade de Roma, é a sede da Igreja Católica e é
+        onde o Papa reside.</ion-card-content
+      >
+      <ion-card-content
+        >A Igreja Católica tem sete sacramentos: batismo, confirmação,
+        eucaristia, penitência, unção dos enfermos, ordem e
+        matrimônio.</ion-card-content
+      >
     </ion-content>
   </div>
 </ion-content>
@@ -38,7 +63,6 @@
   <ion-toolbar color="primary">
     <ion-tabs>
       <ion-tab-bar slot="bottom">
-
         <ion-tab-button [routerLink]="['/inicio']">
           <ion-icon name="home" aria-hidden="true"></ion-icon>
           <ion-label>Inicio</ion-label>
@@ -58,7 +82,6 @@
           <ion-icon name="person" aria-hidden="true"></ion-icon>
           <ion-label>Conta</ion-label>
         </ion-tab-button>
-
       </ion-tab-bar>
     </ion-tabs>
   </ion-toolbar>
