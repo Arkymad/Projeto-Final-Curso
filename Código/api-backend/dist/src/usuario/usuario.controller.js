@@ -41,6 +41,14 @@ let UsuarioController = class UsuarioController {
         });
         return user;
     }
+    async findOne(id) {
+        const user = await this.prisma.getClient().usuario.findUnique({ where: { id: parseInt(id, 10) } });
+        return { data: user };
+    }
+    async findByEmail(email) {
+        const user = await this.prisma.getClient().usuario.findUnique({ where: { email } });
+        return { data: user };
+    }
     async update(id, data) {
         const user = await this.prisma.getClient().usuario.update({
             where: {
@@ -83,6 +91,20 @@ __decorate([
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", Promise)
 ], UsuarioController.prototype, "create", null);
+__decorate([
+    (0, common_1.Get)(':id'),
+    __param(0, (0, common_1.Param)('id')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String]),
+    __metadata("design:returntype", Promise)
+], UsuarioController.prototype, "findOne", null);
+__decorate([
+    (0, common_1.Get)('email/:email'),
+    __param(0, (0, common_1.Param)('email')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String]),
+    __metadata("design:returntype", Promise)
+], UsuarioController.prototype, "findByEmail", null);
 __decorate([
     (0, common_1.Put)(':id'),
     __param(0, (0, common_1.Param)('id')),

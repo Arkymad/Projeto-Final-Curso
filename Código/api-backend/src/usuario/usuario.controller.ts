@@ -44,6 +44,18 @@ export class UsuarioController {
     return user;
   }
 
+  @Get(':id')
+  async findOne(@Param('id') id: string) {
+    const user = await this.prisma.getClient().usuario.findUnique({ where: { id: parseInt(id, 10) } });
+    return { data: user };
+  }
+  
+  @Get('email/:email')
+  async findByEmail(@Param('email') email: string) {
+    const user = await this.prisma.getClient().usuario.findUnique({ where: { email } });
+    return { data: user };
+  }
+
   @Put(':id')
   async update(@Param('id') id: string, 
   @Body() 

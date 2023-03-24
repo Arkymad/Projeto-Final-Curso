@@ -9,11 +9,12 @@
       <ion-img src="../../../assets/icon/logo.jpg"></ion-img>
     </div>
     <br>
-  <form>
+  <form *ngIf="usuario">
     <ion-item>
       <ion-label position="stacked">Nome</ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-input type="text" placeholder="{{ usuario.nome}}">{{ usuario.nome}}</ion-input>
     </ion-item>
+    <p>Nome do usuário: {{usuario.nome}}</p>
     <ion-item>
       <ion-label position="stacked">Email</ion-label>
       <ion-input type="text"></ion-input>
@@ -23,6 +24,10 @@
       <ion-input type="text"></ion-input>
     </ion-item>
     <ion-item>
+      <ion-label position="stacked" aria-required="">Senha antiga</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+    <ion-item>
       <ion-label position="stacked">Nova senha</ion-label>
       <ion-input type="password"></ion-input>
     </ion-item>
@@ -30,12 +35,8 @@
       <ion-label position="stacked">Confirme a senha</ion-label>
       <ion-input type="password"></ion-input>
     </ion-item>
-    <ion-item>
-      <ion-label position="stacked" aria-required="">Senha antiga</ion-label>
-      <ion-input type="password"></ion-input>
-    </ion-item>
-
-    <ion-button expand="block" type="submit">Enviar</ion-button>
+      
+      <ion-button expand="block" type="submit">Enviar</ion-button>
   </form>
 </ion-content>
 
