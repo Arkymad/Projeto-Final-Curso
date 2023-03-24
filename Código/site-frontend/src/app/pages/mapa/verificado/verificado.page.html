@@ -1,29 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Eventos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
 <ion-content>
   <div class="ion-page" id="main-content">
     <ion-header>
       <ion-toolbar>
-        <ion-title>Eventos</ion-title>
+        <ion-title>Verificados</ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content class="ion-padding">
-      <ion-list-header>
-        <ion-label>Tipo de Eventos</ion-label>
-      </ion-list-header>
-
-      <ion-item [routerLink]="['/mapa/todos']">
-        <ion-icon slot="start" name=""></ion-icon>
-        <ion-label>Todos os eventos</ion-label>
-      </ion-item>
-
-      <ion-item [routerLink]="['/mapa/verificado']">
-        <ion-icon slot="start" name=""></ion-icon>
-        <ion-label>Verificado</ion-label>
-      </ion-item>
-
-      <ion-item [routerLink]="['/mapa/nao-verificado']">
-        <ion-icon slot="start" name=""></ion-icon>
-        <ion-label>Não Verificado</ion-label>
-      </ion-item>
+      <div id="mapId" style="width: 100%; height: 100%"></div>
     </ion-content>
   </div>
 </ion-content>
@@ -36,14 +25,17 @@
           <ion-icon name="home" aria-hidden="true"></ion-icon>
           <ion-label>Inicio</ion-label>
         </ion-tab-button>
+
         <ion-tab-button [routerLink]="['/religioes']">
           <ion-icon name="star" aria-hidden="true"></ion-icon>
           <ion-label>Religiões</ion-label>
         </ion-tab-button>
+
         <ion-tab-button [routerLink]="['/mapa']">
           <ion-icon name="map" aria-hidden="true"></ion-icon>
           <ion-label>Mapa</ion-label>
         </ion-tab-button>
+
         <ion-tab-button [routerLink]="['/conta']">
           <ion-icon name="person" aria-hidden="true"></ion-icon>
           <ion-label>Conta</ion-label>

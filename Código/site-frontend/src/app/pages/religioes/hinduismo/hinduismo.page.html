@@ -2,34 +2,53 @@
   <div class="ion-page" id="main-content">
     <ion-header>
       <ion-toolbar>
-        <ion-title><strong>Hinduismo</strong></ion-title>
+        <ion-title><strong>Hinduísmo</strong></ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content class="ion-padding">
+      <ion-item>
+        <ion-icon slot="start" name="checkbox"></ion-icon>
+        <ion-label><strong>O que é?</strong></ion-label>
+      </ion-item>
 
-        <ion-item>
-          <ion-icon slot="start"  name="checkbox"></ion-icon>
-          <ion-label><strong>O que é?</strong></ion-label>
-        </ion-item>
+      <ion-card-content>
+        O hinduísmo é uma religião que se originou na Índia e é considerada a
+        mais antiga do mundo. É baseada na crença em múltiplos deuses e deusas,
+        na lei do karma e na reencarnação. O hinduísmo enfatiza a importância da
+        busca pela iluminação espiritual e da prática do dharma, que é o
+        cumprimento do dever de cada um na sociedade.
+      </ion-card-content>
 
-        <ion-card-content>Texto sobre a religião.</ion-card-content>
+      <ion-item>
+        <ion-icon slot="start" class="bi bi-bank"></ion-icon>
+        <ion-label>Quais os principais templos:</ion-label>
+      </ion-item>
 
-        <ion-item>
-          <ion-icon slot="start"  class="bi bi-bank"></ion-icon>
-          <ion-label>Quais os principais templos:</ion-label>
-        </ion-item>
+      <ion-card-content
+        >- Templo Hare Krishna (Rio de Janeiro)</ion-card-content
+      >
 
-        <ion-card-content>Texto sobre os templos.</ion-card-content>
-        
-        <ion-item>
-          <ion-icon slot="start"  name="bulb"></ion-icon>
-          <ion-label>Curiosidades:</ion-label>
-        </ion-item>
+      <ion-item>
+        <ion-icon slot="start" name="bulb"></ion-icon>
+        <ion-label>Curiosidades:</ion-label>
+      </ion-item>
 
-        <ion-card-content>Texto sobre as Curiosidades.
-
-          </ion-card-content>
-          
+      <ion-card-content>
+        O hinduísmo é a terceira maior religião do mundo, com mais de um bilhão
+        de seguidores.
+      </ion-card-content>
+      <ion-card-content
+        >O hinduísmo é uma religião complexa e diversa, que inclui a crença na
+        reencarnação, no carma e em muitos deuses.</ion-card-content
+      >
+      <ion-card-content
+        >O rio Ganges é considerado sagrado pelos hindus e é um local importante
+        de peregrinação.</ion-card-content
+      >
+      <ion-card-content
+        >A casta é uma parte importante da cultura hindu, embora tenha sido
+        criticada por muitos por ser discriminatória.</ion-card-content
+      >
     </ion-content>
   </div>
 </ion-content>
@@ -38,7 +57,6 @@
   <ion-toolbar color="primary">
     <ion-tabs>
       <ion-tab-bar slot="bottom">
-
         <ion-tab-button [routerLink]="['/inicio']">
           <ion-icon name="home" aria-hidden="true"></ion-icon>
           <ion-label>Inicio</ion-label>
@@ -58,7 +76,6 @@
           <ion-icon name="person" aria-hidden="true"></ion-icon>
           <ion-label>Conta</ion-label>
         </ion-tab-button>
-
       </ion-tab-bar>
     </ion-tabs>
   </ion-toolbar>
