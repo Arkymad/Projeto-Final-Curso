@@ -1,6 +1,6 @@
 datasource db {
   provider = "postgresql"
-  url = "postgresql://postgres:2kHSQ3p6GZIWZlefmC3e@containers-us-west-60.railway.app:5678/railway"
+  url = "postgres://projeto_final_irbe_user:WqfwiITqE6Skulq80hg0tTZdlsmUW46d@dpg-cgf04apmbg50899f1keg-a.oregon-postgres.render.com/projeto_final_irbe"
 }
 
 generator client {
