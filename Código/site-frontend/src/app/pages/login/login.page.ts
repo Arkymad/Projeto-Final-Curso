@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Login } from 'src/app/interface/login'; 
 import { UsuarioService } from 'src/app/services/usuario.service';
 import { NavController } from '@ionic/angular';
-
+import { Storage } from '@ionic/storage';
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -14,7 +14,8 @@ export class LoginPage implements OnInit {
   constructor(
     private formBuilder:  FormBuilder,
     private usersService: UsuarioService,
-    public navCtrl: NavController,
+    private storage: Storage,
+    public navCtrl: NavController
   ) { }
 
   login: Login = {
@@ -44,7 +45,7 @@ export class LoginPage implements OnInit {
     .subscribe({
     next: (res) => {
     console.log(res);
-    console.log('Usuário autenticado.')
+    this.storage.set('email', this.login.email);
     this.navCtrl.navigateForward('/inicio');
     },
     error: (e) => {

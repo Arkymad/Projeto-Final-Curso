@@ -33,6 +33,18 @@ let TokenController = class TokenController {
             },
         });
     }
+    async findAll() {
+        const token = await this.prisma.getClient().token.findMany();
+        return token;
+    }
+    async findOne(id) {
+        const token = await this.prisma.getClient().token.findUnique({ where: { id: parseInt(id, 10) } });
+        return { data: token };
+    }
+    async findByEmail(email) {
+        const token = await this.prisma.getClient().token.findUnique({ where: { email } });
+        return { data: token };
+    }
 };
 __decorate([
     (0, common_1.Post)(),
@@ -41,6 +53,26 @@ __decorate([
     __metadata("design:paramtypes", [String, String]),
     __metadata("design:returntype", Promise)
 ], TokenController.prototype, "save", null);
+__decorate([
+    (0, common_1.Get)('listar'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", Promise)
+], TokenController.prototype, "findAll", null);
+__decorate([
+    (0, common_1.Get)(':id'),
+    __param(0, (0, common_1.Param)('id')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String]),
+    __metadata("design:returntype", Promise)
+], TokenController.prototype, "findOne", null);
+__decorate([
+    (0, common_1.Get)('email/:email'),
+    __param(0, (0, common_1.Param)('email')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String]),
+    __metadata("design:returntype", Promise)
+], TokenController.prototype, "findByEmail", null);
 TokenController = __decorate([
     (0, common_1.Controller)('token'),
     __metadata("design:paramtypes", [prisma_service_1.PrismaService])

@@ -38,7 +38,7 @@
   <ion-toolbar color="primary">
     <ion-tabs>
       <ion-tab-bar slot="bottom">
-        <ion-tab-button [routerLink]="['/home']">
+        <ion-tab-button (click)="logout()">
           <ion-icon name="power" aria-hidden="true"></ion-icon>
           <ion-label>Sair</ion-label>
         </ion-tab-button>
