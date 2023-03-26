@@ -4,17 +4,28 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding">
-    <div class="logo">
-      <ion-img src="../../../assets/icon/logo.jpg"></ion-img>
-    </div>
-    <br>
-  <form *ngIf="usuario">
+<ion-content  class="ion-padding">
+  <div class="logo">
+    <ion-img src="../../../assets/icon/logo.jpg"></ion-img>
+  </div>
+  <br>
+  <ion-content *ngIf="usuario"> 
+    <p>ID: {{usuario.id}}</p>
+    <p>Nome: {{usuario.nome}}</p>
+    <p>Email: {{usuario.email}}</p>
+    <p>Religião: {{usuario.religiao_id}}</p>
+    <p>Igreja: {{usuario.igreja_id}}</p>
+    <p>Senha: {{usuario.senha}}</p>
+    <p>Status: {{usuario.status}}</p>
+    <p>Criado Em: {{usuario.createdAt}}</p>
+    <p>Editado Em: {{usuario.updatedAt}}</p>
+  </ion-content>
+<!--     
+  <form >
     <ion-item>
       <ion-label position="stacked">Nome</ion-label>
-      <ion-input type="text" placeholder="{{ usuario.nome}}">{{ usuario.nome}}</ion-input>
+      <ion-input type="text" ></ion-input>
     </ion-item>
-    <p>Nome do usuário: {{usuario.nome}}</p>
     <ion-item>
       <ion-label position="stacked">Email</ion-label>
       <ion-input type="text"></ion-input>
@@ -37,7 +48,7 @@
     </ion-item>
       
       <ion-button expand="block" type="submit">Enviar</ion-button>
-  </form>
+  </form> -->
 </ion-content>
 
 <ion-footer>

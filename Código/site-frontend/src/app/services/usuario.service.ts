@@ -25,7 +25,7 @@ export class UsuarioService {
   }
 
   findEmail(email:string){
-    return this.httpClient.get(usuarioURL+`/email${email}`)
+    return this.httpClient.get(usuarioURL+`email/${email}`)
   }
 
   findAll() {
