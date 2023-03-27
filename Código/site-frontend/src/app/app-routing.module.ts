@@ -39,6 +39,11 @@ const routes: Routes = [
     path: 'religioes',
     loadChildren: () => import('./pages/religioes/religioes.module').then( m => m.ReligioesPageModule)
   },
+  {
+    path: 'criar-evento',
+    loadChildren: () => import('./pages/criar-evento/criar-evento.module').then( m => m.CriarEventoPageModule)
+  },
+
 ];
 
 @NgModule({

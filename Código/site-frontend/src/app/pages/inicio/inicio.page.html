@@ -38,9 +38,9 @@
   <ion-toolbar color="primary">
     <ion-tabs>
       <ion-tab-bar slot="bottom">
-        <ion-tab-button (click)="logout()">
-          <ion-icon name="power" aria-hidden="true"></ion-icon>
-          <ion-label>Sair</ion-label>
+        <ion-tab-button [routerLink]="['/inicio']">
+          <ion-icon name="home" aria-hidden="true"></ion-icon>
+          <ion-label>Inicio</ion-label>
         </ion-tab-button>
         <ion-tab-button [routerLink]="['/religioes']">
           <ion-icon name="star" aria-hidden="true"></ion-icon>
@@ -53,6 +53,10 @@
         <ion-tab-button [routerLink]="['/conta']">
           <ion-icon name="person" aria-hidden="true"></ion-icon>
           <ion-label>Conta</ion-label>
+        </ion-tab-button>
+        <ion-tab-button [routerLink]="['/criar-evento']">
+          <ion-icon name="calendar-number" aria-hidden="true"></ion-icon>
+          <ion-label>Criar Evento</ion-label>
         </ion-tab-button>
       </ion-tab-bar>
     </ion-tabs>
