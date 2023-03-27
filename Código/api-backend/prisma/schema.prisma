@@ -10,8 +10,8 @@ generator client {
 
 model Usuario {
   id        Int      @id @default(autoincrement())
-  religiao_id Int   @default(0)
-  igreja_id Int     @default(0)
+  religiao_id Int   @default(1)
+  igreja_id Int     @default(1)
   nome   String
   email     String   @unique
   senha  String

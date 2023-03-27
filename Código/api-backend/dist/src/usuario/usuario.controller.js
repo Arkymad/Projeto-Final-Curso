@@ -43,11 +43,11 @@ let UsuarioController = class UsuarioController {
     }
     async findOne(id) {
         const user = await this.prisma.getClient().usuario.findUnique({ where: { id: parseInt(id, 10) } });
-        return { data: user };
+        return user;
     }
     async findByEmail(email) {
         const user = await this.prisma.getClient().usuario.findUnique({ where: { email } });
-        return { data: user };
+        return user;
     }
     async update(id, data) {
         const user = await this.prisma.getClient().usuario.update({

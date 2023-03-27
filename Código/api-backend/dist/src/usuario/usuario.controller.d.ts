@@ -13,12 +13,8 @@ export declare class UsuarioController {
         senha: string;
         status: boolean;
     }): Promise<import(".prisma/client").Usuario>;
-    findOne(id: string): Promise<{
-        data: import(".prisma/client").Usuario;
-    }>;
-    findByEmail(email: string): Promise<{
-        data: import(".prisma/client").Usuario;
-    }>;
+    findOne(id: string): Promise<import(".prisma/client").Usuario>;
+    findByEmail(email: string): Promise<import(".prisma/client").Usuario>;
     update(id: string, data: {
         religiao: number;
         igreja: number;

@@ -38,9 +38,9 @@
   <ion-toolbar color="primary">
     <ion-tabs>
       <ion-tab-bar slot="bottom">
-        <ion-tab-button [routerLink]="['/inicio']">
-          <ion-icon name="home" aria-hidden="true"></ion-icon>
-          <ion-label>Inicio</ion-label>
+        <ion-tab-button (click)="logout()">
+          <ion-icon name="power" aria-hidden="true"></ion-icon>
+          <ion-label>Sair</ion-label>
         </ion-tab-button>
         <ion-tab-button [routerLink]="['/religioes']">
           <ion-icon name="star" aria-hidden="true"></ion-icon>
