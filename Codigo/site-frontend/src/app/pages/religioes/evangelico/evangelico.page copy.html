@@ -1,0 +1,88 @@
+<ion-content>
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title><strong>Evangélico</strong></ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <ion-item>
+        <ion-icon slot="start" name="checkbox"></ion-icon>
+        <ion-label><strong>O que é?</strong></ion-label>
+      </ion-item>
+
+      <ion-card-content>
+        O evangelicalismo é um movimento cristão que se desenvolveu a partir da
+        Reforma Protestante. Os evangélicos enfatizam a autoridade da Bíblia
+        como a palavra de Deus e a salvação pela fé em Jesus Cristo. Existem
+        muitas denominações evangélicas diferentes, cada uma com suas próprias
+        crenças e práticas.
+      </ion-card-content>
+
+      <ion-item>
+        <ion-icon slot="start" class="bi bi-bank"></ion-icon>
+        <ion-label>Quais os principais templos:</ion-label>
+      </ion-item>
+
+      <ion-card-content
+        >- Igreja Presbiteriana do Rio de Janeiro (Rio de
+        Janeiro)</ion-card-content
+      >
+      <ion-card-content
+        >- Igreja Internacional da Graça de Deus (Niterói, Rio de
+        Janeiro)</ion-card-content
+      >
+
+      <ion-item>
+        <ion-icon slot="start" name="bulb"></ion-icon>
+        <ion-label>Curiosidades:</ion-label>
+      </ion-item>
+
+      <ion-card-content>
+        O termo "evangélico" é usado para descrever uma ampla gama de
+        denominações protestantes que enfatizam a autoridade da Bíblia e a
+        salvação pela fé em Jesus Cristo.
+      </ion-card-content>
+      <ion-card-content
+        >Os evangélicos são conhecidos por seu trabalho missionário e
+        evangelismo.</ion-card-content
+      >
+      <ion-card-content
+        >A maior denominação evangélica no mundo é a Igreja Assembleia de Deus,
+        com mais de 70 milhões de membros em todo o mundo.</ion-card-content
+      >
+      <ion-card-content
+        >Os evangélicos têm uma grande influência política nos Estados Unidos e
+        em outros países.</ion-card-content
+      >
+    </ion-content>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button [routerLink]="['/inicio']">
+          <ion-icon name="home" aria-hidden="true"></ion-icon>
+          <ion-label>Inicio</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button [routerLink]="['/religioes']">
+          <ion-icon name="star" aria-hidden="true"></ion-icon>
+          <ion-label>Religiões</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button [routerLink]="['/mapa']">
+          <ion-icon name="map" aria-hidden="true"></ion-icon>
+          <ion-label>Mapa</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button [routerLink]="['/conta']">
+          <ion-icon name="person" aria-hidden="true"></ion-icon>
+          <ion-label>Conta</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

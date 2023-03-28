@@ -1,85 +1,88 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Comunicação Divina</ion-title>
+    <ion-buttons slot="primary" class="navbar-header">
+      <ion-button [routerLink]="['/inicio']">Inicio</ion-button>
+      <ion-button [routerLink]="['/religioes']">Religiões</ion-button>
+      <ion-button [routerLink]="['/mapa']">Mapa</ion-button>
+      <ion-button [routerLink]="['/criar-evento']">Criar Evento</ion-button>
+      <ion-button [routerLink]="['/conta']">Conta</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
 <ion-content>
-  <div class="ion-page" id="main-content">
-    <ion-header>
-      <ion-toolbar>
-        <ion-title><strong>Espírita</strong></ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content class="ion-padding">
+  <p class="ion-text-center">Espírita</p>
+  <div class="ion-padding">
+    <ion-list>
       <ion-item>
-        <ion-icon slot="start" name="checkbox"></ion-icon>
-        <ion-label><strong>O que é?</strong></ion-label>
+        <ion-icon slot="start" name="help-circle"></ion-icon>
+        <ion-label>O que é?</ion-label>
       </ion-item>
-
-      <ion-card-content>
-        O espiritismo é uma religião que se originou na França no século XIX,
-        baseada na crença em espíritos e na comunicação com os mortos. Os
-        espíritas acreditam que a vida continua após a morte e que os espíritos
-        podem influenciar a vida das pessoas. A religião enfatiza a caridade, a
-        reforma íntima e a busca pela evolução espiritual.
-      </ion-card-content>
+      <ion-card>
+        <ion-card-content>
+          <p>
+            O espiritismo é uma religião que se originou na França no século
+            XIX, baseada na crença em espíritos e na comunicação com os mortos.
+            Os espíritas acreditam que a vida continua após a morte e que os
+            espíritos podem influenciar a vida das pessoas. A religião enfatiza
+            a caridade, a reforma íntima e a busca pela evolução espiritual.
+          </p>
+        </ion-card-content>
+      </ion-card>
 
       <ion-item>
-        <ion-icon slot="start" class="bi bi-bank"></ion-icon>
+        <ion-icon slot="start" name="information-circle"></ion-icon>
         <ion-label>Quais os principais templos:</ion-label>
       </ion-item>
-
-      <ion-card-content
-        >- Federação Espírita do Estado do Rio de Janeiro (Rio de
-        Janeiro)</ion-card-content
-      >
-      <ion-card-content
-        >- Grupo Espírita Luz e Amor (Petrópolis, Rio de
-        Janeiro)</ion-card-content
-      >
+      <ion-card>
+        <ion-card-content>
+          <p>Federação Espírita do Estado do Rio de Janeiro (Rio de Janeiro)</p>
+          <p>Grupo Espírita Luz e Amor (Petrópolis, Rio de Janeiro)</p>
+          <p>Templo 1</p>
+        </ion-card-content>
+      </ion-card>
 
       <ion-item>
         <ion-icon slot="start" name="bulb"></ion-icon>
         <ion-label>Curiosidades:</ion-label>
       </ion-item>
-
-      <ion-card-content>
-        O Espiritismo é uma religião fundada na França por Allan Kardec no
-        século XIX.
-      </ion-card-content>
-      <ion-card-content
-        >Os praticantes do Espiritismo acreditam na existência de espíritos que
-        podem se comunicar com os vivos através de médiuns.</ion-card-content
-      >
-      <ion-card-content
-        >O Espiritismo também enfatiza a importância da caridade e da vida
-        virtuosa como caminhos para a evolução espiritual.</ion-card-content
-      >
-      <ion-card-content
-        >O Brasil é o país com o maior número de espíritas no
-        mundo.</ion-card-content
-      >
-    </ion-content>
+      <ion-card>
+        <ion-card-content>
+          <p>
+            O Espiritismo é uma religião fundada na França por Allan Kardec no
+            século XIX.
+          </p>
+          <p>
+            Os praticantes do Espiritismo acreditam na existência de espíritos
+            que podem se comunicar com os vivos através de médiuns.
+          </p>
+          <p>O Brasil é o país com o maior número de espíritas no mundo.</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
   </div>
 </ion-content>
 
 <ion-footer>
-  <ion-toolbar color="primary">
+  <ion-toolbar color="primary" class="navbar-footer">
     <ion-tabs>
       <ion-tab-bar slot="bottom">
-        <ion-tab-button [routerLink]="['/inicio']">
-          <ion-icon name="home" aria-hidden="true"></ion-icon>
-          <ion-label>Inicio</ion-label>
-        </ion-tab-button>
-
         <ion-tab-button [routerLink]="['/religioes']">
           <ion-icon name="star" aria-hidden="true"></ion-icon>
           <ion-label>Religiões</ion-label>
         </ion-tab-button>
-
         <ion-tab-button [routerLink]="['/mapa']">
           <ion-icon name="map" aria-hidden="true"></ion-icon>
           <ion-label>Mapa</ion-label>
         </ion-tab-button>
-
         <ion-tab-button [routerLink]="['/conta']">
           <ion-icon name="person" aria-hidden="true"></ion-icon>
           <ion-label>Conta</ion-label>
+        </ion-tab-button>
+        <ion-tab-button [routerLink]="['/criar-evento']">
+          <ion-icon name="calendar-number" aria-hidden="true"></ion-icon>
+          <ion-label>Criar Evento</ion-label>
         </ion-tab-button>
       </ion-tab-bar>
     </ion-tabs>

@@ -1,80 +1,76 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Comunicação Divina</ion-title>
+    <ion-buttons slot="primary" class="navbar-header">
+      <ion-button [routerLink]="['/inicio']">Inicio</ion-button>
+      <ion-button [routerLink]="['/religioes']">Religiões</ion-button>
+      <ion-button [routerLink]="['/mapa']">Mapa</ion-button>
+      <ion-button [routerLink]="['/criar-evento']">Criar Evento</ion-button>
+      <ion-button [routerLink]="['/conta']">Conta</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
 <ion-content>
-  <div class="ion-page" id="main-content">
-    <ion-header>
-      <ion-toolbar>
-        <ion-title><strong>Hinduísmo</strong></ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content class="ion-padding">
+  <p class="ion-text-center">Budismo</p>
+  <div class="ion-padding">
+    <ion-list>
       <ion-item>
-        <ion-icon slot="start" name="checkbox"></ion-icon>
-        <ion-label><strong>O que é?</strong></ion-label>
+        <ion-icon slot="start" name="help-circle"></ion-icon>
+        <ion-label>O que é?</ion-label>
       </ion-item>
-
-      <ion-card-content>
-        O hinduísmo é uma religião que se originou na Índia e é considerada a
-        mais antiga do mundo. É baseada na crença em múltiplos deuses e deusas,
-        na lei do karma e na reencarnação. O hinduísmo enfatiza a importância da
-        busca pela iluminação espiritual e da prática do dharma, que é o
-        cumprimento do dever de cada um na sociedade.
-      </ion-card-content>
+      <ion-card>
+        <ion-card-content>
+          <p>Texto sobre a religião</p>
+        </ion-card-content>
+      </ion-card>
 
       <ion-item>
-        <ion-icon slot="start" class="bi bi-bank"></ion-icon>
+        <ion-icon slot="start" name="information-circle"></ion-icon>
         <ion-label>Quais os principais templos:</ion-label>
       </ion-item>
-
-      <ion-card-content
-        >- Templo Hare Krishna (Rio de Janeiro)</ion-card-content
-      >
+      <ion-card>
+        <ion-card-content>
+          <p>Templo 1</p>
+          <p>Templo 1</p>
+          <p>Templo 1</p>
+        </ion-card-content>
+      </ion-card>
 
       <ion-item>
         <ion-icon slot="start" name="bulb"></ion-icon>
         <ion-label>Curiosidades:</ion-label>
       </ion-item>
-
-      <ion-card-content>
-        O hinduísmo é a terceira maior religião do mundo, com mais de um bilhão
-        de seguidores.
-      </ion-card-content>
-      <ion-card-content
-        >O hinduísmo é uma religião complexa e diversa, que inclui a crença na
-        reencarnação, no carma e em muitos deuses.</ion-card-content
-      >
-      <ion-card-content
-        >O rio Ganges é considerado sagrado pelos hindus e é um local importante
-        de peregrinação.</ion-card-content
-      >
-      <ion-card-content
-        >A casta é uma parte importante da cultura hindu, embora tenha sido
-        criticada por muitos por ser discriminatória.</ion-card-content
-      >
-    </ion-content>
+      <ion-card>
+        <ion-card-content>
+          <p>Templo 1</p>
+          <p>Templo 1</p>
+          <p>Templo 1</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
   </div>
 </ion-content>
 
 <ion-footer>
-  <ion-toolbar color="primary">
+  <ion-toolbar color="primary" class="navbar-footer">
     <ion-tabs>
       <ion-tab-bar slot="bottom">
-        <ion-tab-button [routerLink]="['/inicio']">
-          <ion-icon name="home" aria-hidden="true"></ion-icon>
-          <ion-label>Inicio</ion-label>
-        </ion-tab-button>
-
         <ion-tab-button [routerLink]="['/religioes']">
           <ion-icon name="star" aria-hidden="true"></ion-icon>
           <ion-label>Religiões</ion-label>
         </ion-tab-button>
-
         <ion-tab-button [routerLink]="['/mapa']">
           <ion-icon name="map" aria-hidden="true"></ion-icon>
           <ion-label>Mapa</ion-label>
         </ion-tab-button>
-
         <ion-tab-button [routerLink]="['/conta']">
           <ion-icon name="person" aria-hidden="true"></ion-icon>
           <ion-label>Conta</ion-label>
+        </ion-tab-button>
+        <ion-tab-button [routerLink]="['/criar-evento']">
+          <ion-icon name="calendar-number" aria-hidden="true"></ion-icon>
+          <ion-label>Criar Evento</ion-label>
         </ion-tab-button>
       </ion-tab-bar>
     </ion-tabs>

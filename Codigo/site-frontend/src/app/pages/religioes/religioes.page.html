@@ -1,68 +1,63 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Comunicação Divina</ion-title>
+
+    <ion-buttons slot="primary" class="navbar-header">
+      <ion-button [routerLink]="['/inicio']">Inicio</ion-button>
+      <ion-button [routerLink]="['/religioes']">Religiões</ion-button>
+      <ion-button [routerLink]="['/mapa']">Mapa</ion-button>
+      <ion-button [routerLink]="['/criar-evento']">Criar Evento</ion-button>
+      <ion-button [routerLink]="['/conta']">Conta</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
 <ion-content>
-  <div class="ion-page" id="main-content">
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Religiões</ion-title>
-      </ion-toolbar>
-    </ion-header>
+  <p class="ion-text-center">Religiões</p>
+  <div class="ion-padding">
+    <ion-item [routerLink]="['/religioes/budismo']">
+      <ion-label>Budismo</ion-label>
+    </ion-item>
+    <ion-item [routerLink]="['/religioes/camdomble']">
+      <ion-label>Camdomblé</ion-label>
+    </ion-item>
 
-    <ion-content  class="ion-padding">
-        <ion-item [routerLink]="['/religioes/budismo']">
-          <ion-icon slot="start"  name=""></ion-icon>
-          <ion-label>Budismo</ion-label>
-        </ion-item>
+    <ion-item [routerLink]="['/religioes/catolica']">
+      <ion-label>Católica</ion-label>
+    </ion-item>
 
-        <ion-item [routerLink]="['/religioes/camdomble']">
-          <ion-icon slot="start"  name=""></ion-icon>
-          <ion-label>Camdomblé</ion-label>
-        </ion-item>
+    <ion-item [routerLink]="['/religioes/espirita']">
+      <ion-label>Espírita</ion-label>
+    </ion-item>
 
-        <ion-item [routerLink]="['/religioes/catolica']">
-          <ion-icon slot="start"  name=""></ion-icon>
-          <ion-label>Católica</ion-label>
-        </ion-item>
+    <ion-item [routerLink]="['/religioes/evangelico']">
+      <ion-label>Evangélico</ion-label>
+    </ion-item>
 
-        <ion-item [routerLink]="['/religioes/espirita']">
-          <ion-icon slot="start"  name=""></ion-icon>
-          <ion-label>Espírita</ion-label>
-        </ion-item>
+    <ion-item [routerLink]="['/religioes/hinduismo']">
+      <ion-label>Hinduísmo</ion-label>
+    </ion-item>
 
-        <ion-item [routerLink]="['/religioes/evangelico']">
-          <ion-icon slot="start"  name=""></ion-icon>
-          <ion-label>Evangélico</ion-label>
-        </ion-item>
+    <ion-item [routerLink]="['/religioes/islamismo']">
+      <ion-label>Islamismo</ion-label>
+    </ion-item>
 
-        <ion-item [routerLink]="['/religioes/hinduismo']">
-          <ion-icon slot="start"  name=""></ion-icon>
-          <ion-label>Hinduísmo</ion-label>
-        </ion-item>
+    <ion-item [routerLink]="['/religioes/jeova']">
+      <ion-label>Jeová</ion-label>
+    </ion-item>
 
-        <ion-item [routerLink]="['/religioes/islamismo']">
-          <ion-icon slot="start"  name=""></ion-icon>
-          <ion-label>Islamismo</ion-label>
-        </ion-item>
+    <ion-item [routerLink]="['/religioes/judaismo']">
+      <ion-label>Judaísmo</ion-label>
+    </ion-item>
 
-        <ion-item [routerLink]="['/religioes/jeova']">
-          <ion-icon slot="start"  name=""></ion-icon>
-          <ion-label>Jeová</ion-label>
-        </ion-item>
-
-        <ion-item [routerLink]="['/religioes/judaismo']">
-          <ion-icon slot="start"  name=""></ion-icon>
-          <ion-label>Judaísmo</ion-label>
-        </ion-item>
-
-        <ion-item [routerLink]="['/religioes/umbanda']">
-          <ion-icon slot="start"  name=""></ion-icon>
-          <ion-label>Umbanda</ion-label>
-        </ion-item>
-    </ion-content>
+    <ion-item [routerLink]="['/religioes/umbanda']">
+      <ion-label>Umbanda</ion-label>
+    </ion-item>
   </div>
 </ion-content>
 
-
 <ion-footer>
-  <ion-toolbar color="primary">
+  <ion-toolbar color="primary" class="navbar-footer">
     <ion-tabs>
       <ion-tab-bar slot="bottom">
         <ion-tab-button [routerLink]="['/inicio']">

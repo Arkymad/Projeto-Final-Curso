@@ -1,67 +1,73 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Conta</ion-title>
+    <ion-title>Comunicação Divina</ion-title>
+    <ion-buttons slot="primary" class="navbar-header">
+      <ion-button [routerLink]="['/inicio']">Inicio</ion-button>
+      <ion-button [routerLink]="['/religioes']">Religiões</ion-button>
+      <ion-button [routerLink]="['/mapa']">Mapa</ion-button>
+      <ion-button [routerLink]="['/criar-evento']">Criar Evento</ion-button>
+      <ion-button [routerLink]="['/conta']">Conta</ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content  class="ion-padding">
-  <div class="logo">
-    <ion-img src="../../../assets/icon/logo.jpg"></ion-img>
-  </div>
-  <br>
-  <form *ngIf="usuario">
-    <ion-item>
-      <ion-label position="stacked">ID</ion-label>
-      <ion-input type="text" readonly="">{{usuario?.id}}</ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="stacked">Nome</ion-label>
-      <ion-input type="text">{{usuario?.nome }}</ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="stacked">Email</ion-label>
-      <ion-input type="text">{{usuario?.email}}</ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="stacked" aria-required="">Religião</ion-label>
-      <ion-input type="text">{{usuario?.religiao_id}}</ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="stacked">Igreja</ion-label>
-      <ion-input type="text"> {{usuario?.igreja_id}}</ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="stacked">Senha Antiga</ion-label>
-      <ion-input type="password">{{usuario?.senha}}</ion-input>
-    </ion-item>
-    
-    <ion-item>
-      <ion-label position="stacked">Nova senha</ion-label>
-      <ion-input type="password"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="stacked">Confirme a senha</ion-label>
-      <ion-input type="password"></ion-input>
-    </ion-item>
-      
-    <ion-item>
-      <ion-label position="stacked">Status</ion-label>
-      <ion-input type="text">{{usuario?.status}}</ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="stacked">Criado Em</ion-label>
-      <ion-input type="text"> {{usuario?.createdAt}}</ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="stacked">Modificado Em</ion-label>
-      <ion-input type="text">{{usuario?.updatedAt}}</ion-input>
-    </ion-item>
+<ion-content>
+  <p class="ion-text-center">Conta</p>
+  <div class="ion-padding">
+    <form *ngIf="usuario">
+      <ion-item>
+        <ion-label position="stacked">ID</ion-label>
+        <ion-input type="text" readonly="">{{usuario?.id}}</ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Nome</ion-label>
+        <ion-input type="text">{{usuario?.nome }}</ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Email</ion-label>
+        <ion-input type="text">{{usuario?.email}}</ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked" aria-required="">Religião</ion-label>
+        <ion-input type="text">{{usuario?.religiao_id}}</ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Igreja</ion-label>
+        <ion-input type="text"> {{usuario?.igreja_id}}</ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Senha Antiga</ion-label>
+        <ion-input type="password">{{usuario?.senha}}</ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Nova senha</ion-label>
+        <ion-input type="password"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Confirme a senha</ion-label>
+        <ion-input type="password"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Status</ion-label>
+        <ion-input type="text">{{usuario?.status}}</ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Criado Em</ion-label>
+        <ion-input type="text"> {{usuario?.createdAt}}</ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Modificado Em</ion-label>
+        <ion-input type="text">{{usuario?.updatedAt}}</ion-input>
+      </ion-item>
       <ion-button expand="block" type="submit">Enviar</ion-button>
-  </form> 
+    </form>
+  </div>
 </ion-content>
 
 <ion-footer>
-  <ion-toolbar color="primary">
+  <ion-toolbar color="primary" class="navbar-footer">
     <ion-tabs>
       <ion-tab-bar slot="bottom">
         <ion-tab-button [routerLink]="['/inicio']">
