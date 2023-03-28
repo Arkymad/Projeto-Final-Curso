@@ -1,11 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
-
 import { CriarEventoPageRoutingModule } from './criar-evento-routing.module';
-
 import { CriarEventoPage } from './criar-evento.page';
 
 @NgModule({
@@ -13,7 +10,9 @@ import { CriarEventoPage } from './criar-evento.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    CriarEventoPageRoutingModule
+    CriarEventoPageRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   declarations: [CriarEventoPage]
 })

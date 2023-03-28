@@ -14,22 +14,46 @@
 <ion-content>
   <p class="ion-text-center">Criar Evento</p>
   <ion-card class="ion-padding">
-    <form>
+    <form [formGroup]="formevento" (submit)="cadastro()">
       <ion-item>
         <ion-label position="stacked">Religião *</ion-label>
-        <ion-input type="text" required></ion-input>
+        <ion-input 
+        type="text" 
+        required 
+        class="form-control" 
+        formControlName="religiao"
+        [(ngModel)]="evento.religiao" 
+        ></ion-input>
       </ion-item>
       <ion-item>
         <ion-label position="stacked">Nome do Evento *</ion-label>
-        <ion-input type="text" required></ion-input>
+        <ion-input 
+        type="text" 
+        required 
+        class="form-control" 
+        formControlName="nome"
+        [(ngModel)]="evento.nome" 
+        ></ion-input>
       </ion-item>
       <ion-item>
         <ion-label position="stacked">Endereço *</ion-label>
-        <ion-input type="text" required></ion-input>
+        <ion-input 
+        type="text" 
+        required 
+        class="form-control" 
+        formControlName="endereco"
+        [(ngModel)]="evento.endereco" 
+        ></ion-input>
       </ion-item>
       <ion-item>
         <ion-label position="stacked">Data *</ion-label>
-        <ion-input type="date" required></ion-input>
+        <ion-input 
+        type="date" 
+        required 
+        class="form-control" 
+        formControlName="data"
+        [(ngModel)]="evento.data" 
+        ></ion-input>
       </ion-item>
       <ion-item>
         <ion-label position="stacked">Senha *</ion-label>
@@ -37,7 +61,15 @@
       </ion-item>
       <ion-item>
         <ion-label position="stacked">Descrição do Evento</ion-label>
-        <ion-textarea name="descricao" rows="5"></ion-textarea>
+        <ion-textarea 
+        name="descricao" 
+        rows="5"
+        type="text" 
+        required 
+        class="form-control" 
+        formControlName="descricao"
+        [(ngModel)]="evento.descricao" 
+        ></ion-textarea>
       </ion-item>
 
       <ion-button expand="block" type="submit">Enviar</ion-button>

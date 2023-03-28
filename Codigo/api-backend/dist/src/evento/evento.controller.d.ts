@@ -6,16 +6,18 @@ export declare class EventoController {
     constructor(prisma: PrismaService, authService: AuthService);
     findAll(): Promise<import(".prisma/client").evento[]>;
     create(data: {
-        usuario: number;
-        data: Date;
+        religiao: string;
+        nome: string;
         endereco: string;
+        data: string;
         tipo: boolean;
         descricao: string;
     }): Promise<import(".prisma/client").evento>;
     update(id: string, data: {
-        usuario: number;
-        data: Date;
+        religiao: string;
+        nome: string;
         endereco: string;
+        data: string;
         tipo: boolean;
         descricao: string;
     }): Promise<import(".prisma/client").evento>;

@@ -1,8 +1,8 @@
 -- CreateTable
 CREATE TABLE "Usuario" (
     "id" SERIAL NOT NULL,
-    "religiao_id" INTEGER NOT NULL DEFAULT 0,
-    "igreja_id" INTEGER NOT NULL DEFAULT 0,
+    "religiao_id" INTEGER NOT NULL DEFAULT 1,
+    "igreja_id" INTEGER NOT NULL DEFAULT 1,
     "nome" TEXT NOT NULL,
     "email" TEXT NOT NULL,
     "senha" TEXT NOT NULL,
@@ -50,10 +50,11 @@ CREATE TABLE "igreja" (
 -- CreateTable
 CREATE TABLE "evento" (
     "id_evento" SERIAL NOT NULL,
-    "usuario_id" INTEGER NOT NULL,
-    "data" TIMESTAMP(3) NOT NULL,
+    "religiao" TEXT NOT NULL,
+    "nome" TEXT NOT NULL,
     "endereco" TEXT NOT NULL,
-    "tipo" BOOLEAN NOT NULL,
+    "data" TEXT NOT NULL,
+    "tipo" BOOLEAN NOT NULL DEFAULT false,
     "descricao" TEXT NOT NULL,
 
     CONSTRAINT "evento_pkey" PRIMARY KEY ("id_evento")

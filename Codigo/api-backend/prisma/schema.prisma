@@ -47,9 +47,10 @@ model igreja {
 
 model evento {
   id_evento Int @id @default(autoincrement())
-  usuario_id Int
-  data DateTime
+  religiao String
+  nome String
   endereco String
-  tipo Boolean
+  data String
+  tipo Boolean @default(false)
   descricao String
 }

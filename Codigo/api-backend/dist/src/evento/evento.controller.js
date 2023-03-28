@@ -23,43 +23,45 @@ let EventoController = class EventoController {
         this.authService = authService;
     }
     async findAll() {
-        const users = await this.prisma.getClient().evento.findMany();
-        return users;
+        const events = await this.prisma.getClient().evento.findMany();
+        return events;
     }
     async create(data) {
-        const user = await this.prisma.getClient().evento.create({
+        const event = await this.prisma.getClient().evento.create({
             data: {
-                usuario_id: data.usuario,
-                data: data.data,
+                religiao: data.religiao,
+                nome: data.nome,
                 endereco: data.endereco,
+                data: data.data,
                 tipo: data.tipo,
                 descricao: data.descricao
             },
         });
-        return user;
+        return event;
     }
     async update(id, data) {
-        const user = await this.prisma.getClient().evento.update({
+        const event = await this.prisma.getClient().evento.update({
             where: {
                 id_evento: parseInt(id),
             },
             data: {
-                usuario_id: data.usuario,
-                data: data.data,
+                religiao: data.religiao,
+                nome: data.nome,
                 endereco: data.endereco,
+                data: data.data,
                 tipo: data.tipo,
                 descricao: data.descricao
             },
         });
-        return user;
+        return event;
     }
     async delete(id) {
-        const user = await this.prisma.getClient().evento.delete({
+        const event = await this.prisma.getClient().evento.delete({
             where: {
                 id_evento: parseInt(id),
             },
         });
-        return user;
+        return event;
     }
 };
 __decorate([
