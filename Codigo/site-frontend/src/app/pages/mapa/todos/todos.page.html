@@ -12,6 +12,20 @@
 </ion-header>
 
 <ion-content>
+  <ion-item *ngFor="let event of (events | async)">
+    <ion-label>
+      <h2>ID: {{ event.id }}</h2>
+      <h2>Religião: {{ event.religiao }}</h2>
+      <h2>Nome: {{ event.nome }}</h2>
+      <h2>Endereço: {{ event.endereco }}</h2>
+      <h2>Data: {{ event.data }}</h2>
+      <h2>Tipo: {{ event.tipo }}</h2>
+      <h2>Descrição: {{ event.descricao }}</h2>
+    </ion-label>
+    <ion-icon slot="start" icon="person-circle" color="primary"></ion-icon>
+  </ion-item>
+</ion-content>
+<ion-content>
   <div class="ion-page ion-padding" id="main-content">
     <div id="mapId" style="width: 100%; height: 100%"></div>
   </div>

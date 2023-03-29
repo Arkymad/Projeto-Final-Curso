@@ -1,6 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import * as Leaflet from 'leaflet';
 import { icon, Marker } from 'leaflet';
+import { Observable } from 'rxjs';
+import { EventoService } from 'src/app/services/evento.service';
 
 @Component({
   selector: 'app-todos',
@@ -9,13 +11,19 @@ import { icon, Marker } from 'leaflet';
 })
 export class TodosPage implements OnInit, OnDestroy {
   map!: Leaflet.Map;
+  events!: Observable<any>; 
 
   ionViewDidEnter() {
     this.leafletMap();
   }
-  constructor() {}
+  constructor(
+    private eventService: EventoService
+  ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+   this.events = this.eventService.findAll();
+    console.log('Eventos:', this.events)
+  }
 
   ngOnDestroy() {
     this.map.remove();
@@ -49,4 +57,5 @@ export class TodosPage implements OnInit, OnDestroy {
       .bindPopup('Casa Thalis')
       .openPopup();
   }
+
 }
